@@ -1,0 +1,11 @@
+.Orders {
+    color: #212121;
+    font-family: inherit;
+    margin: 10% 25px;
+    padding: 24px 0 30px 24px;
+    position: relative;
+    border: 2px ridge;
+    box-shadow: 66px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+}

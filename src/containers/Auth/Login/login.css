@@ -1,0 +1,79 @@
+.Login {
+    color: #212121;
+    font-family: inherit;
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+    border: 2px ridge;
+    box-shadow: 66px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.Login h2{
+  width: 80%;
+  text-align: center;
+}
+
+.Signup{
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0 30% 30%;
+  width: 100%;
+}
+
+.Signup label {
+  color:  green;
+  cursor: pointer;
+}
+
+.Login label{
+  align-items: center;
+  padding: 16px;
+  margin-left: 27%;
+}
+
+
+
+.Login form{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+font-size: 16px;
+line-height: 1.5;
+color: #222326;
+font-weight: 400;
+font-family: inherit;
+box-sizing: border-box;
+align-items: center;
+}
+
+.Login form p{
+  color: green;
+  font-style: inherit;
+  font-family: inherit;
+  padding: 8px;
+}
+
+.Login input{
+  width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Login button{
+font: inherit;
+color: #fff;
+background-color: #1db954;
+border-radius: 20px;
+width: 50%;
+margin-left: 7%;
+border-style: hidden;
+outline: none;
+}
+

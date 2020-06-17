@@ -1,0 +1,19 @@
+.FrontPage {
+    font-family: 'Open Sans',Arial,sans-serif;
+}
+
+.Categorylist{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    box-shadow: black;
+}
+
+.Notification{
+    font-size: 26px;
+    color: red;
+    margin: 16px;
+    border-top: 1px solid rgb(233, 221, 221);
+    border-bottom: 1px solid rgb(233, 221, 221) ;
+}
+

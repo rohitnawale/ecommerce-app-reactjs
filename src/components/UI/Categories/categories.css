@@ -1,0 +1,17 @@
+.Categories {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    font-family: inherit;
+    letter-spacing: 0;
+    color: #212121;
+    box-sizing: border-box;
+    margin: 60px;
+    padding: 0 16px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+}

@@ -1,0 +1,30 @@
+.Sidebar{
+    font-size: 14px;
+    color: #212121;
+    line-height: 1.4;
+    font-family: inherit;
+    border-right:1px ridge grey;
+    position: absolute;
+    box-shadow: 66px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-left: 16px;
+    padding: 0px 16px 0px 0px;
+}
+
+ul{
+    border: none;
+    border-bottom:1px bold black;
+    margin-right: 0px;
+}
+
+input, label, h5{
+    padding: 10px;
+    cursor: pointer;
+}
+.Filters{
+    margin: 5px;
+   
+
+}

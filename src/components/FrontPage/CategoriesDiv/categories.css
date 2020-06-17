@@ -1,0 +1,28 @@
+.Category {
+    image-resolution:auto;
+    padding: 0 16px;
+    height: 250px;
+    margin-left: 16px;
+    margin-right: 22px;
+    background-size: contain;
+    width: 40%;
+    background-size: 450px 360px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    border-style:outset;
+    transition: 1s ease-in;
+}
+
+.Category :hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+h4{
+    text-align: center;
+    padding-bottom: 8px;
+    color: green;
+}

@@ -1,0 +1,52 @@
+.Products {
+    color: #212121;
+    font-family: inherit;
+    margin-left: 25px;
+    margin-bottom: 16px;
+    padding: 24px 0 30px 24px;
+    position: relative;
+    border: 2px ridge;
+    box-shadow: 66px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+}
+
+.Image{
+    max-width: 70%;
+    max-height: 70%;
+    margin-right: 5px;
+}
+
+h3{
+    padding: 5px;
+    margin-top: 25px;
+    color: gray;
+}
+
+h6{
+    font-size: 20px;
+    font-family: inherit;
+    font-style: inherit;
+    color: grey;
+}
+
+
+.Cart{
+    border:2px bold indigo;
+}
+ 
+.Products button:disabled{
+    background-color: gray;
+}
+
+.AddToCart {
+    min-width: 100px;
+    min-height: 50px;
+    max-height: 50px;
+    background-color: green;
+    color: honeydew;
+    border-radius: 12px;
+    outline: none;
+}
+
+

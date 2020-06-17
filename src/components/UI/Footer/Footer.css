@@ -1,0 +1,27 @@
+.Footer {
+    position: relative;
+    padding: 3px;
+    left: 0;
+    bottom: 0;
+    margin-top: 16px;
+    width: 100%;
+    background-color: rgb(92, 91, 91);
+    color: white;
+    text-align: center;
+  }
+
+  .Firstrow {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: inherit;
+    flex-direction: row;
+    border-bottom: outset;
+  }
+
+  p,h5{
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      top: 0;
+      justify-content: space-around;
+  }

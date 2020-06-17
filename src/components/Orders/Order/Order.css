@@ -1,0 +1,14 @@
+.Order {
+    border-bottom: 2px solid #f0f0f0;
+    margin: 5px;
+    text-align: left;
+}
+
+.Order label{
+    color: #000;
+}
+
+.Order h4{
+    text-align: left;
+    
+}

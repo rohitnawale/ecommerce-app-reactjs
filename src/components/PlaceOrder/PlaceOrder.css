@@ -1,0 +1,93 @@
+.PlaceOrder {
+    color: #212121;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 16px;
+    padding: 24px 0 30px 24px;
+    border: 2px ridge;
+
+}
+
+
+.main{
+    margin-top: 20%;
+    display: relative;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  
+  ul li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ul li:last-child {
+    border-bottom: none
+  }
+
+.PlaceOrder label{
+    margin-left: 8%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.PlaceOrder p{
+    font-size: 18px;
+    font-family: inherit;
+    font-style: inherit;
+    color: rgb(37, 34, 48);
+}
+
+form{
+    margin-left: 27%;
+    align-items: center;
+
+}
+.PlaceOrder input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.PlaceOrder input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.OrderButton:enabled {
+    min-width: 100px;
+    min-height: 50px;
+    max-height: 50px;
+    background-color: green;
+    color: honeydew;
+    border-radius: 12px;
+    outline: none;
+}
+
+.OrderButton :disabled{
+  min-width: 100px;
+    min-height: 50px;
+    max-height: 50px;
+    background-color: rgb(153, 160, 153);
+    color: honeydew;
+    border-radius: 12px;
+    outline: none;
+
+}
+
