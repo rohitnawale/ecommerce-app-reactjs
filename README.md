@@ -1,9 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App]
 
 Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## E Commerce app using React.js
+
+Getting started with the project:
+
+1.) Download and extract thie repo or you can run the following command in terminal/CMD:
+
+    git clone https://github.com/rohitnawale/ecommerce-app-reactjs
+    
+2.) Go to the root folder and run:
+    
+    npm i
+    
+3.)Then finally run the command 
+
+    npm start
+    
+And done.. site will be available on [http://localhost:3000](http://localhost:3000)
+
+## Backend API for this is available on: <br> https://github.com/rohitnawale/E-commerce-App-In-Node.js
 
 Create React App is divided into two packages:
 
@@ -13,16 +30,6 @@ Create React App is divided into two packages:
 You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
 
 When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
-
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
-
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
-
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
-
-## Sending Feedback
-
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
 
 ## Folder Structure
 
