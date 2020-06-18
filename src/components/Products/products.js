@@ -77,6 +77,7 @@ class Products extends Component {
                 imgLink = {product.imgLink}
                 section = {product.section}
                 category = {product.category}
+                quantity = {product.quantity}
                 />
             ))
         }
