@@ -12,8 +12,12 @@ const footer = () => {
                 <p>Partners</p>
             </div>
             <br/>
-            <h5>Contact Us</h5>
-            <h5>About</h5>
+            <div className={classes.Firstrow}>
+                <h5>Code is available on :<a href ="https://github.com/rohitnawale/ecommerce-app-reactjs"> <b> Github</b></a></h5><br/>
+                <h5>Contact Us</h5>
+        <       h5>About</h5>
+            </div>
+            
         </div>
     )
 }

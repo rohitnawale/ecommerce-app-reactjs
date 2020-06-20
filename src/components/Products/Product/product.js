@@ -7,6 +7,7 @@ import * as actions from '../../../store/actions/cart'
 class Product extends Component {
     state = {
         isCart: false,
+        cart:JSON.parse(localStorage.getItem('cart')),
         buttonText: "Add To Cart",
         count: 0,
         inStock: true
@@ -14,9 +15,24 @@ class Product extends Component {
     }
 
     componentDidMount(){
-        if(this.props.cart.lenght>0){
-            this.setState({isCart:true})
+        let newCart = this.state.cart
+        // console.log(newCart)
+        // let ifInCart = false
+        if(newCart !== null){
+        if(newCart.length > 0){
+            newCart.forEach(product => {
+                if(product.product !== null){
+                    if(product.product._id === this.props.id){
+                        //ifInCart = true
+                        this.setState({isCart:true, count:product.quantity, buttonText:"Remove from cart"})
+                    }
+                }
+                
+            })
         }
+    }
+        
+        
         //disable the add to cart button if product is out of stock
         if(this.props.quantity <=0){
             this.setState({inStock:false, buttonText:"Out of Stock"})
@@ -28,7 +44,7 @@ class Product extends Component {
         if(this.state.isCart === true){
             this.setState({isCart: !this.state.isCart, buttonText:"Add to cart"})
             this.props.clearItemFromCart(this.props.productData)
-            console.log(this.props.cart)
+            // console.log(this.props.cart)
         }
         else{
             this.setState({count:0 ,isCart: !this.state.isCart, buttonText:"Remove from cart"})
@@ -40,7 +56,7 @@ class Product extends Component {
     addToCart = () => {
         this.setState({count: this.state.count + 1})
         this.props.addToCart(this.props.productData, this.state.count+1, this.props.id)
-        console.log(this.props.cart)
+        // console.log(this.props.cart)
         // console.log(this.props.itemCounts)
     }
 
@@ -48,8 +64,12 @@ class Product extends Component {
     removeFromCart = () => {
         if(this.state.count > 0){
             this.setState({count: this.state.count - 1})
-            this.props.removeFromCart(this.props.productData)
-            console.log(this.props.cart)
+            this.props.removeFromCart(this.props.productData, this.state.count-1, this.props.id)
+            // console.log(this.props.cart)
+        }
+        else if(this.state.count === 0){
+            this.setState({isCart: !this.state.isCart, buttonText:"Add to cart"})
+            this.props.clearItemFromCart(this.props.productData)
         }
     }
     render(){
@@ -95,7 +115,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         addToCart: (product, quantity, key) => dispatch(actions.addToCart(product, quantity, key)),
-        removeFromCart: (product) => dispatch(actions.removeFromCart(product)),
+        removeFromCart: (product, quantity, key) => dispatch(actions.removeFromCart(product, quantity, key)),
         clearItemFromCart:(product) => dispatch(actions.clearItemFromCart(product))
     }
 }

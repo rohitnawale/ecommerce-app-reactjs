@@ -27,9 +27,12 @@ class CartElement extends Component{
     removeFromCart = () => {
         if(this.state.count > 0){
             this.setState({count: this.state.count - 1})
-            this.props.removeFromCart(this.props.productData)
+            this.props.removeFromCart(this.props.productData, this.state.count, this.props.id)
             this.props.changeCartAmount("remove", this.props.productData.price)
             console.log(this.props.cart)
+        }
+        else if(this.state.count === 0){
+            this.props.clearItemFromCart(this.props.productData)
         }
     }
     render(){
@@ -72,7 +75,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         addToCart: (product, quantity, key) => dispatch(actions.addToCart(product, quantity, key)),
-        removeFromCart: (product) => dispatch(actions.removeFromCart(product)),
+        removeFromCart: (product, quantity, key) => dispatch(actions.removeFromCart(product, quantity, key)),
         clearItemFromCart:(product) => dispatch(actions.clearItemFromCart(product))
     }
 }

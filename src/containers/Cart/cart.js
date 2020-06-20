@@ -71,17 +71,17 @@ class Cart extends Component{
     render(){
         let cartItems = "Your Cart Is Empty :("
         if(this.state.cart !== null){
-        if(this.state.cart.length>1){
+        if(this.state.cart.length>0){
             console.log(this.state.cart)
             // eslint-disable-next-line
             cartItems = this.state.cart.map(item => {
-                if(item.product !== null && item.product !== undefined){
+                if(item.product !== null && item.product !== undefined && item.quantity >0){
                     console.log("[sdfmkns]: ", item.product)
                   return  <CartElement
                         key={item.product._id}
                         id={item.product._id}
                         productData={item.product}
-                        imgLink = "https://media.gettyimages.com/photos/red-apple-with-droplet-picture-id185071735?s=612x612"
+                        imgLink = {item.product.imgLink}
                         name={item.product.name}
                         price={item.product.price}
                         priceTag={item.product.priceTag}

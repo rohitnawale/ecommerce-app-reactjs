@@ -41,6 +41,9 @@ const addToCart = (state, action) => {
         localStorage.setItem('cart', JSON.stringify(updatedCart))
     }
     else{
+        if(state.cart[0].product === null){
+            state.cart.length = 0
+        }
         state.cart.push({product: action.productData, quantity: action.quantity})
         updatedCart = [...state.cart]
         localStorage.setItem('cart', JSON.stringify(updatedCart))    
@@ -59,9 +62,12 @@ const removeFromCart = (state, action) => {
            return p.product._id === action.productData._id
         }
    })
-   updatedCart[getIndex].quantity -= 1
+   
    if(updatedCart[getIndex].quantity === 0){
        updatedCart = removeByAttr(updatedCart, 'product', action.productData)
+   }
+   else{
+   updatedCart[getIndex].quantity -= 1
    }
    localStorage.removeItem('cart')
    localStorage.setItem('cart', JSON.stringify(updatedCart))   
@@ -101,12 +107,18 @@ var removeByAttr = function(arr, attr, value){
     while(i--){
        if( arr[i] 
            && arr[i].hasOwnProperty(attr) 
-           && (arguments.length > 2 && arr[i][attr] === value ) ){ 
-
-           arr.splice(i,1);
+           && (arguments.length > 2 ) ){ 
+            console.log("[remove by attr]",arr[i])
+            console.log("[remove by attr]",value)
+            if(arr[i].product._id === value._id){
+                console.log("item removed: ", value.name)
+                arr.splice(i,1);
+                break
+            }
 
        }
     }
+    console.log("after removing", arr)
     return arr;
 }
 
