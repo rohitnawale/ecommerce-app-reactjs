@@ -1,3 +1,6 @@
+### Site is currently deployed at <br>
+https://ecommerce-online-shopping.web.app
+
 This project was bootstrapped with [Create React App]
 
 Below you will find some information on how to perform common tasks.<br>
